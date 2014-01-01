@@ -13,4 +13,16 @@ Dependencies
 Usage
 -----
 
+build the packages:
 
+    ./build-php5-sundown.sh
+    ./build-php5-oauth.sh
+
+publish to repo:
+
+    ./make-repo.sh
+
+
+Copy the repo to somewhere nice, like an http endpoint:
+
+    rsync repo/* somewhere...
