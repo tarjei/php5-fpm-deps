@@ -15,9 +15,9 @@ fi
 
 wget http://pecl.php.net/get/sundown-$VERSION.tgz
 
-tar zxvf sundown-$VERSION
+tar zxvf sundown-$VERSION.tgz
 pushd sundown-$VERSION
-
+phpize
 ./configure
 make
 #mkdir pkg
@@ -27,6 +27,6 @@ make
 fpm -t deb -s dir -n php5-sundown -v $VERSION ./modules/sundown.so=/usr/lib/php5/20121212/sundown.so
 mv php5-sundown*deb ..
 popd
-rm -rf sundown-$VERSION*
+#rm -rf sundown-$VERSION*
 
 
